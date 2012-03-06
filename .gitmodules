@@ -52,3 +52,6 @@
 [submodule "vendor/paredit"]
 	path = vendor/paredit
 	url = git://github.com/emacsmirror/paredit.git
+[submodule "vendor/color-theme"]
+	path = vendor/color-theme
+	url = git://github.com/yaroot/color-theme.git

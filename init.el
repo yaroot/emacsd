@@ -96,10 +96,11 @@
      (eq system-type 'darwin)
      (eq system-type 'windows-nt))
     (set-default-font "Monaco-14")
+  (set-default-font "monospace-9")
   )
-  
 
-(defalias 'yes-or-no-p 'y-or-n-p)
+
+(Defalias 'yes-or-no-p 'y-or-n-p)
 
 
 ;(require 'auto-async-byte-compile)
