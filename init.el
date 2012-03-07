@@ -72,15 +72,54 @@
 (require 'coffee-mode)
 
 
+;; jde
+;;(setq debug-on-error t)
+(add-to-list 'load-path "~/emacs.d/vendor/cedet/semantic")
+(add-to-list 'load-path "~/emacs.d/vendor/cedet/speedbar")
+(add-to-list 'load-path "~/emacs.d/vendor/cedet/eieio")
+;;(add-to-list 'load-path "~/emacs.d/vendor/jdee/lisp")
+;;(add-to-list 'load-path "~/emacs.d/vendor/elib")
+;;(require 'jde)
+
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/jdee/lisp"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vender/cedet/common"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/elib"))
+(load-file (expand-file-name "~/.emacs.d/vendor/cedet/common/cedet.el"))
+
+(setq defer-loading-jde t) ;; jde auto loading => nope
+(require 'jde)
+;;(setq defer-loading-jde t) ;; jde auto loading => nope
+;;(if defer-loading-jde
+;;    (progn
+;;      (autoload 'jde-mode "jde" "JDE mode." t)
+;;      (setq auto-mode-alist
+;;            (append
+;;             '(("\\.java\\'" . jde-mode))
+;;             auto-mode-alist)))
+;;  (require 'jde))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 (setq
-  backup-by-copying t
-  backup-directory-alist
-    '(("." . "~/.emacs.d/tmp/saves"))
-  delete-old-versions t
-  kept-new-versions 6
-  kept-old-versions 2
-  version-control t)
+ backup-by-copying t
+ backup-directory-alist
+ '(("." . "~/.emacs.d/tmp/saves"))
+ delete-old-versions t
+ kept-new-versions 6
+ kept-old-versions 2
+ version-control t)
 
 (global-linum-mode t)
 
@@ -88,7 +127,7 @@
 (setq-default tab-width 4)
 
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
-    (when (fboundp mode) (funcall mode -1)))
+  (when (fboundp mode) (funcall mode -1)))
 
 (setq inhibit-splash-screen t)
 
@@ -100,10 +139,7 @@
   )
 
 
-(Defalias 'yes-or-no-p 'y-or-n-p)
+;;(byte-recompile-directory "~/.emacs.d" 0)
 
+(defalias 'yes-or-no-p 'y-or-n-p)
 
-;(require 'auto-async-byte-compile)
-;(add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode)
-
-;(byte-recompile-directory "~/.emacs.d" 0)
