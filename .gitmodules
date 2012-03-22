@@ -55,12 +55,3 @@
 [submodule "vendor/color-theme"]
 	path = vendor/color-theme
 	url = git://github.com/yaroot/color-theme.git
-[submodule "vendor/cedet"]
-	path = vendor/cedet
-	url = git://github.com/yaroot/cedet.git
-[submodule "vendor/jdee"]
-	path = vendor/jdee
-	url = git://github.com/yaroot/jdee.git
-[submodule "vendor/elib"]
-	path = vendor/elib
-	url = git://github.com/yaroot/elib.git

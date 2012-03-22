@@ -72,41 +72,6 @@
 (require 'coffee-mode)
 
 
-;; jde
-;;(setq debug-on-error t)
-(add-to-list 'load-path "~/emacs.d/vendor/cedet/semantic")
-(add-to-list 'load-path "~/emacs.d/vendor/cedet/speedbar")
-(add-to-list 'load-path "~/emacs.d/vendor/cedet/eieio")
-;;(add-to-list 'load-path "~/emacs.d/vendor/jdee/lisp")
-;;(add-to-list 'load-path "~/emacs.d/vendor/elib")
-;;(require 'jde)
-
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/jdee/lisp"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/vender/cedet/common"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/elib"))
-(load-file (expand-file-name "~/.emacs.d/vendor/cedet/common/cedet.el"))
-
-(setq defer-loading-jde t) ;; jde auto loading => nope
-(require 'jde)
-;;(setq defer-loading-jde t) ;; jde auto loading => nope
-;;(if defer-loading-jde
-;;    (progn
-;;      (autoload 'jde-mode "jde" "JDE mode." t)
-;;      (setq auto-mode-alist
-;;            (append
-;;             '(("\\.java\\'" . jde-mode))
-;;             auto-mode-alist)))
-;;  (require 'jde))
-
-
-
-
-
-
-
-
-
-
 
 
 
