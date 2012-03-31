@@ -58,3 +58,12 @@
 [submodule "vendor/raibow-delimiters"]
 	path = vendor/raibow-delimiters
 	url = git://github.com/jlr/rainbow-delimiters.git
+[submodule "vendor/auto-complete"]
+	path = vendor/auto-complete
+	url = git://github.com/m2ym/auto-complete.git
+[submodule "vendor/popup"]
+	path = vendor/popup
+	url = git://github.com/m2ym/popup-el.git
+[submodule "vendor/fuzzy"]
+	path = vendor/fuzzy
+	url = git://github.com/m2ym/fuzzy-el.git

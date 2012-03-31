@@ -39,6 +39,13 @@
 (yas/load-directory yas/snippet-dirs)
 ;(yas/initialize)
 
+(add-to-list `load-path "~/.emacs.d/vendor/popup")
+(add-to-list `load-path "~/.emacs.d/vendor/fuzzy")
+(add-to-list `load-path "~/.emacs.d/vendor/auto-complete")
+;(add-to-list `auto-complete-config "~/.emacs.d/")
+(require `auto-complete-config)
+(ac-config-default)
+
 (add-to-list `load-path "~/.emacs.d/vendor/evil/lib")
 (require `undo-tree)
 (global-undo-tree-mode)
