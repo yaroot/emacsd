@@ -55,3 +55,6 @@
 [submodule "vendor/color-theme"]
 	path = vendor/color-theme
 	url = git://github.com/yaroot/color-theme.git
+[submodule "vendor/raibow-delimiters"]
+	path = vendor/raibow-delimiters
+	url = git://github.com/jlr/rainbow-delimiters.git
