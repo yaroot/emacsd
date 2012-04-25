@@ -5,8 +5,28 @@
 (package-initialize)
 
 
+(defvar my-packages '(color-theme
+                      evil
+                      evil-numbers
+                      ir-black-theme
+                      zenburn-theme
+                      rainbow-delimiters
+                      lua-mode
+                      textmate
+                      yasnippet
+                      inf-ruby
+                      paredit
+                      auto-complete
+                      ))
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
+
 (require 'evil)
 (evil-mode 1)
+
+(global-rainbow-delimiters-mode)
 
 
 ;;         (add-to-list 'load-path "~/.emacs.d")
@@ -126,3 +146,17 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (ir-black)))
+ '(custom-safe-themes (quote ("b7553781f4a831d5af6545f7a5967eb002c8daeee688c5cbf33bf27936ec18b3" "669feb4d768dcc48feaf1d9c6156d29a587949fd44c0f87121443115de2c265e" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
