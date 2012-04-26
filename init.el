@@ -17,6 +17,7 @@
                       zenburn-theme
                       rainbow-delimiters
                       lua-mode
+                      full-ack
                       textmate
                       yasnippet
                       inf-ruby
