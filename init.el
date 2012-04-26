@@ -1,11 +1,14 @@
 
-;; (when (not package-archive-contents)
-;;   package-refresh-contents)
-
 (require 'package)
+
+
 (add-to-list 'package-archives
   '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
+
+(when (not package-archive-contents)
+  package-refresh-contents)
+
 
 (defvar my-packages '(color-theme
                       evil
@@ -35,7 +38,7 @@
 ;;(define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
 ;;(define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
 
-(require 'ack)
+;(require 'ack)
 (require 'paredit)
 
 (require 'textmate)
@@ -44,9 +47,9 @@
 (global-rainbow-delimiters-mode)
 
 (require `yasnippet)
-(setq yas/snippet-dirs "~/.emacs.d/vendor/yasnippet/snippets")
-(yas/load-directory yas/snippet-dirs)
-;(yas/initialize)
+;(setq yas/snippet-dirs "~/.emacs.d/vendor/yasnippet/snippets")
+;(yas/load-directory yas/snippet-dirs)
+(yas/initialize)
 
 (require `auto-complete-config)
 (ac-config-default)
