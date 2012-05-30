@@ -17,13 +17,15 @@
                       zenburn-theme
                       rainbow-delimiters
                       lua-mode
-                      full-ack
+                      ack-and-a-half
                       textmate
                       yasnippet
                       inf-ruby
                       paredit
                       auto-complete
                       ))
+;; full-ack
+
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
@@ -41,6 +43,11 @@
 
 ;(require 'ack)
 (require 'paredit)
+
+(autoload 'ack-and-a-half-same "ack-and-a-half" nil t)
+(autoload 'ack-and-a-half "ack-and-a-half" nil t)
+(autoload 'ack-and-a-half-find-file-same "ack-and-a-half" nil t)
+(autoload 'ack-and-a-half-find-file "ack-and-a-half" nil t)
 
 (require 'textmate)
 (textmate-mode)
