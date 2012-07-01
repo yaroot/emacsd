@@ -9,11 +9,11 @@
 (when (not package-archive-contents)
   package-refresh-contents)
 
-
 (defvar my-packages '(color-theme
                       evil
                       evil-numbers
-                      ir-black-theme
+                      color-theme-ir-black
+                      ;ir-black-theme
                       zenburn-theme
                       rainbow-delimiters
                       lua-mode
@@ -90,6 +90,8 @@
 
 (global-linum-mode t)
 
+(load-theme 'zenburn t)
+
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 4)
 
@@ -105,22 +107,6 @@
   (set-default-font "monospace-9")
   )
 
-
-;;(byte-recompile-directory "~/.emacs.d" 0)
-
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (ir-black)))
- '(custom-safe-themes (quote ("b7553781f4a831d5af6545f7a5967eb002c8daeee688c5cbf33bf27936ec18b3" "669feb4d768dcc48feaf1d9c6156d29a587949fd44c0f87121443115de2c265e" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;;(byte-recompile-directory "~/.emacs.d" 0)
