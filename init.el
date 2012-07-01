@@ -12,8 +12,8 @@
 (defvar my-packages '(color-theme
                       evil
                       evil-numbers
-                      color-theme-ir-black
                       ;ir-black-theme
+                      ;git://github.com/jmdeldin/ir-black-theme.el.git
                       zenburn-theme
                       rainbow-delimiters
                       lua-mode
@@ -90,7 +90,7 @@
 
 (global-linum-mode t)
 
-(load-theme 'zenburn t)
+(load-theme 'ir-black t)
 
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -109,4 +109,3 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;;(byte-recompile-directory "~/.emacs.d" 0)
