@@ -1,34 +1,38 @@
 
-(require 'package)
+;; (require 'package)
 
+;; (add-to-list 'package-archives
+;;   '("marmalade" . "http://marmalade-repo.org/packages/"))
+;; (package-initialize)
 
-(add-to-list 'package-archives
-  '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
+;; (when (not package-archive-contents)
+;;   package-refresh-contents)
 
-(when (not package-archive-contents)
-  package-refresh-contents)
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(require 'el-get)
+(el-get 'wait)
 
-(defvar my-packages '(color-theme
-                      evil
-                      evil-numbers
-                      ;ir-black-theme
-                      ;git://github.com/jmdeldin/ir-black-theme.el.git
-                      zenburn-theme
-                      rainbow-delimiters
-                      lua-mode
-                      ack-and-a-half
-                      textmate
-                      yasnippet
-                      inf-ruby
-                      paredit
-                      auto-complete
-                      ))
+;; (defvar my-packages '(color-theme
+;;                       evil
+;;                       evil-numbers
+;;                       ;ir-black-theme
+;;                       ;git://github.com/jmdeldin/ir-black-theme.el.git
+;;                       zenburn-theme
+;;                       rainbow-delimiters
+;;                       lua-mode
+;;                       ack-and-a-half
+;;                       textmate
+;;                       yasnippet
+;;                       inf-ruby
+;;                       paredit
+;;                       auto-complete
+;;                       ))
 ;; full-ack
 
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
+;; (dolist (p my-packages)
+;;   (when (not (package-installed-p p))
+;;     (package-install p)))
+
 
 
 (require 'evil)
@@ -54,10 +58,10 @@
 
 (global-rainbow-delimiters-mode)
 
-(require `yasnippet)
-;(setq yas/snippet-dirs "~/.emacs.d/vendor/yasnippet/snippets")
-;(yas/load-directory yas/snippet-dirs)
-(yas/initialize)
+;; (require `yasnippet)
+;; ;(setq yas/snippet-dirs "~/.emacs.d/vendor/yasnippet/snippets")
+;; ;(yas/load-directory yas/snippet-dirs)
+;; (yas/initialize)
 
 (require `auto-complete-config)
 (ac-config-default)
@@ -90,7 +94,8 @@
 
 (global-linum-mode t)
 
-(load-theme 'ir-black t)
+;; (load-theme 'ir-black t)
+(load-theme 'zenburn t)
 
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 4)
