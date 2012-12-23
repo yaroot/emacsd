@@ -94,13 +94,17 @@
 
 (global-linum-mode t)
 
-;; (load-theme 'ir-black t)
-(load-theme 'zenburn t)
+
+(load-file "~/.emacs.d/el-get/color-theme-ir-black/color-theme-ir-black.el")
+(color-theme-ir-black)
+;(load-theme 'ir-black t)
+;(load-theme 'zenburn t)
 
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 4)
 
-(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
+; menu-bar-mode tool-bar-mode scroll-bar-mode
+(dolist (mode '(tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
 
 (setq inhibit-splash-screen t)
@@ -109,7 +113,8 @@
      (eq system-type 'darwin)
      (eq system-type 'windows-nt))
     (set-default-font "Monaco-14")
-  (set-default-font "monospace-9")
+  (set-default-font "DejaVu Sans Mono-10")
+;  (set-default-font "monospace-9")
   )
 
 (defalias 'yes-or-no-p 'y-or-n-p)
