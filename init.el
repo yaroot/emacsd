@@ -40,26 +40,22 @@
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
 
-(require 'evil)
+;(require 'evil)
 (evil-mode 1)
-
-
-;;(add-to-list 'load-path "~/.emacs.d/vendor/evi-numbers")
-;;(require 'evil-numbers)
 
 ;;(define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
 ;;(define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
 
-;(require 'ack)
-(require 'paredit)
+; (require 'ack)
+; (require 'paredit)
 
-(autoload 'ack-and-a-half-same "ack-and-a-half" nil t)
-(autoload 'ack-and-a-half "ack-and-a-half" nil t)
-(autoload 'ack-and-a-half-find-file-same "ack-and-a-half" nil t)
-(autoload 'ack-and-a-half-find-file "ack-and-a-half" nil t)
+;; (autoload 'ack-and-a-half-same "ack-and-a-half" nil t)
+;; (autoload 'ack-and-a-half "ack-and-a-half" nil t)
+;; (autoload 'ack-and-a-half-find-file-same "ack-and-a-half" nil t)
+;; (autoload 'ack-and-a-half-find-file "ack-and-a-half" nil t)
 
-(require 'textmate)
-(textmate-mode)
+;;(require 'textmate)
+;;(textmate-mode)
 
 (global-rainbow-delimiters-mode)
 
@@ -70,9 +66,6 @@
 
 ; (require `auto-complete-config)
 ; (ac-config-default)
-
-;(require 'ido)
-;(ido-mode t)
 
 
 ; (autoload 'po-mode "po-mode"
