@@ -12,47 +12,29 @@
 (require 'el-get)
 (el-get 'wait)
 
-;; (defvar my-packages '(color-theme
-;;                       evil
-;;                       evil-numbers
-;;                       ;ir-black-theme
-;;                       ;git://github.com/jmdeldin/ir-black-theme.el.git
-;;                       zenburn-theme
-;;                       rainbow-delimiters
-;;                       lua-mode
-;;                       ack-and-a-half
-;;                       textmate
-;;                       yasnippet
-;;                       inf-ruby
-;;                       paredit
-;;                       auto-complete
-;;                       ))
+;; color-theme-ir-black
+;; el-get
+;; evil
+;; evil-leader
+;; evil-numbers
+;; evil-surround
 ;; full-ack
-
-;; (dolist (p my-packages)
-;;   (when (not (package-installed-p p))
-;;     (package-install p)))
-
+;; paredit
+;; rainbow-delimiters
+;; scala-mode
+;; textmate
+;; zenburn-theme
 
 (add-to-list 'load-path "/usr/share/ensime/elisp")
 (add-to-list 'exec-path "/usr/share/ensime")
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
-
 ;(require 'evil)
 (evil-mode 1)
 
 ;;(define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
 ;;(define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
-
-; (require 'ack)
-; (require 'paredit)
-
-;; (autoload 'ack-and-a-half-same "ack-and-a-half" nil t)
-;; (autoload 'ack-and-a-half "ack-and-a-half" nil t)
-;; (autoload 'ack-and-a-half-find-file-same "ack-and-a-half" nil t)
-;; (autoload 'ack-and-a-half-find-file "ack-and-a-half" nil t)
 
 ;;(require 'textmate)
 ;;(textmate-mode)
@@ -67,18 +49,6 @@
 ; (require `auto-complete-config)
 ; (ac-config-default)
 
-
-; (autoload 'po-mode "po-mode"
-;           "Major mode for translators to edit PO files" t)
-; (setq auto-mode-alist (cons '("\\.po\\'\\|\\.po\\." . po-mode)
-;                             auto-mode-alist))
-; 
-; (autoload 'po-find-file-coding-system "po-compat")
-; (modify-coding-system-alist 'file "\\.po\\'\\|\\.po\\."
-;                             'po-find-file-coding-system)
-
-
-;(require 'rinari)
 
 
 (setq
