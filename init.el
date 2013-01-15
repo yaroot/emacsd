@@ -25,8 +25,8 @@
 ;; textmate
 ;; zenburn-theme
 
-(add-to-list 'load-path "/usr/share/ensime/elisp")
-(add-to-list 'exec-path "/usr/share/ensime")
+(add-to-list 'load-path "~/.local/opt/ensime/elisp")
+(add-to-list 'exec-path "~/.local/opt/ensime")
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
