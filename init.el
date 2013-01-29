@@ -25,6 +25,9 @@
 ;; textmate
 ;; zenburn-theme
 
+(add-to-list 'load-path "~/.emacs.d/el-get/scala-mode")
+(require 'scala-mode-auto)
+
 (add-to-list 'load-path "~/.local/opt/ensime/elisp")
 (add-to-list 'exec-path "~/.local/opt/ensime")
 (require 'ensime)
