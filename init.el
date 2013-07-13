@@ -1,16 +1,11 @@
 
+;; TODO
+;; switch to melpa
+
 ;; (require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
-;; (add-to-list 'package-archives
-;;   '("marmalade" . "http://marmalade-repo.org/packages/"))
-;; (package-initialize)
-
-;; (when (not package-archive-contents)
-;;   package-refresh-contents)
-
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-(require 'el-get)
-(el-get 'wait)
 
 ;; color-theme-ir-black
 ;; el-get
