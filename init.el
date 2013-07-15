@@ -1,35 +1,48 @@
 
 ;; TODO
-;; switch to melpa
 
-;; (require 'package)
+(require 'package)
+(require 'cl)
+
+(package-initialize)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
+(defvar prelude-packages
+ '(evil
+   evil-leader
+   evil-numbers
+   evil-paredit
+   full-ack
+   paredit
+   ir-black-theme
+   zenburn-theme
+   rainbow-delimiters
+   textmate)
+ "list of packages to install")
 
-;; color-theme-ir-black
-;; el-get
-;; evil
-;; evil-leader
-;; evil-numbers
-;; evil-surround
-;; full-ack
-;; paredit
-;; rainbow-delimiters
-;; scala-mode
-;; textmate
-;; zenburn-theme
+(defun prelude-packages-installed-p ()
+ (every #'package-installed-p prelude-packages))
 
-(add-to-list 'load-path "~/.emacs.d/opt/scala-mode")
-(require 'scala-mode-auto)
+(unless (prelude-packages-installed-p)
+ (message "%s" "package-refresh-contents")
+ (package-refresh-contents)
+ (message "%s" "done")
+ (dolist (p prelude-packages)
+  (when (not (package-installed-p p))
+   (package-install p))))
 
-(add-to-list 'load-path "~/.local/opt/ensime/elisp")
-(add-to-list 'exec-path "~/.local/opt/ensime")
-(require 'ensime)
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
+; (add-to-list 'load-path "~/.emacs.d/opt/scala-mode")
+; (require 'scala-mode-auto)
+
+; (add-to-list 'load-path "~/.local/opt/ensime/elisp")
+; (add-to-list 'exec-path "~/.local/opt/ensime")
+; (require 'ensime)
+; (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
 ;(require 'evil)
-(evil-mode 1)
+; (evil-mode 1)
 
 ;;(define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
 ;;(define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
@@ -37,7 +50,7 @@
 ;;(require 'textmate)
 ;;(textmate-mode)
 
-(global-rainbow-delimiters-mode)
+; (global-rainbow-delimiters-mode)
 
 ;; (require `yasnippet)
 ;; ;(setq yas/snippet-dirs "~/.emacs.d/vendor/yasnippet/snippets")
@@ -58,11 +71,11 @@
  kept-old-versions 2
  version-control t)
 
-(global-linum-mode t)
+; (global-linum-mode t)
 
 
-(load-file "~/.emacs.d/el-get/color-theme-ir-black/color-theme-ir-black.el")
-(color-theme-ir-black)
+; (load-file "~/.emacs.d/el-get/color-theme-ir-black/color-theme-ir-black.el")
+; (color-theme-ir-black)
 ;(load-theme 'ir-black t)
 ;(load-theme 'zenburn t)
 
@@ -76,11 +89,11 @@
 (setq inhibit-splash-screen t)
 
 (if (or
-     (eq system-type 'darwin)
-     (eq system-type 'windows-nt))
-    (set-default-font "Monaco-14")
+      (eq system-type 'darwin)
+      (eq system-type 'windows-nt))
+  (set-default-font "Monaco-14")
   (set-default-font "DejaVu Sans Mono-10")
-;  (set-default-font "monospace-9")
+  ;  (set-default-font "monospace-9")
   )
 
 (defalias 'yes-or-no-p 'y-or-n-p)
