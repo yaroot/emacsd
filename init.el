@@ -35,6 +35,9 @@
 (load-theme
  'ujelly t)
 
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
 (dolist
  (mode '(tool-bar-mode menu-bar-mode scroll-bar-mode))
  (when (fboundp mode) (funcall mode -1)))
@@ -64,3 +67,13 @@
 (set-default-font "DejaVu Sans Mono-14")
 
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+(setq-default indent-tabs-mode nil)
+
+(setq tab-width 4)
+;; (defvaralias 'c-basic-offset 'tab-width)
+;; (defvaralias 'cperl-indent-level 'tab-width)
+
+;; (setq url-proxy-services '(("http" . "127.0.0.1:7051")
+;;                            ("no_proxy" . "localhost")))
+
