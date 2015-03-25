@@ -13,14 +13,6 @@
 ;;  paredit
 
 
-; (add-to-list 'load-path "~/.emacs.d/opt/scala-mode")
-; (require 'scala-mode-auto)
-
-; (add-to-list 'load-path "~/.local/opt/ensime/elisp")
-; (add-to-list 'exec-path "~/.local/opt/ensime")
-; (require 'ensime)
-; (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
-
 (require 'evil)
 (evil-mode 1)
 
