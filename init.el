@@ -56,7 +56,7 @@
 ;;   (set-default-font "DejaVu Sans Mono-10")
 ;;   ;  (set-default-font "monospace-9")
 ;;   )
-(set-default-font "DejaVu Sans Mono-13")
+(set-default-font "monospace-16")
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
