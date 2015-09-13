@@ -24,15 +24,11 @@
      markdown
      git
      org
-     ;; git
-     ;; markdown
-     ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; syntax-checking
      version-control
-     scala
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
