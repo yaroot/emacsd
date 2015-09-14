@@ -22,7 +22,7 @@
      emacs-lisp
      scala
      markdown
-     git
+     ;; git
      org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -163,6 +163,8 @@ before layers configuration."
    dotspacemacs-default-package-repository nil
    )
   ;; User initialization goes here
+  (setq-default
+   ensime-sem-high-enabled-p nil)
   )
 
 (defun dotspacemacs/config ()
