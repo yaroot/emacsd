@@ -50,8 +50,8 @@
 
 (defun dotspacemacs/init ()
   "Initialization function.
-This function is called at the very startup of Spacemacs initialization
-before layers configuration."
+  This function is called at the very startup of Spacemacs initialization
+  before layers configuration."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
@@ -162,16 +162,22 @@ before layers configuration."
    ;; Not used for now.
    dotspacemacs-default-package-repository nil
    )
+
   ;; User initialization goes here
+  ;; mouse-wheel-follow-mouse 't
   (setq-default
-   ensime-sem-high-enabled-p nil)
+   ensime-sem-high-enabled-p nil
+   mouse-wheel-scroll-amount '(3 ((shift) . 3))
+   mouse-wheel-progressive-speed nil
+   scroll-step 1
+   )
   )
 
 (defun dotspacemacs/config ()
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
-)
+  )
 
 ;; END
 
