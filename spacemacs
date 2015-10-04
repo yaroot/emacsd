@@ -1,5 +1,6 @@
 ;; -*- mode: emacs-lisp -*-
 ;; vim: set ft=lisp:
+;; https://github.com/syl20bnr/spacemacs.git
 
 
 (defun dotspacemacs/layers ()
