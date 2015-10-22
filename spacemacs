@@ -176,8 +176,12 @@
 
 (defun dotspacemacs/config ()
   "Configuration function.
- This function is called at the very end of Spacemacs initialization after
-layers configuration."
+  This function is called at the very end of Spacemacs initialization after
+  layers configuration."
+
+  (global-linum-mode nil)
+  (linum-relative-toggle)
+
   )
 
 ;; END
