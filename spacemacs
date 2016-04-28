@@ -24,6 +24,7 @@
      scala
      markdown
      ;; git
+     yaml
      org
      ;; (shell :variables
      ;;        shell-default-height 30
